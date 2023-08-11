@@ -1,0 +1,30 @@
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.application-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+  height: 100vh;
+}
+
+.testing-area {
+  justify-self: center;
+  grid-column: 6 / span 2;
+  align-self: center;
+  position: relative;
+  width: 4em;
+  height: 4em;
+  background-color: black;
+
+  .tooltip {
+    visibility: hidden;
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+  }
+}
