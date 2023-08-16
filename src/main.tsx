@@ -1,7 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
+import { FSMLoaderContextProvider } from "./contexts/FiniteStateMachines/FSMLoaderContext";
 
 import "./styles/main.scss";
 
@@ -12,7 +14,11 @@ if (root) {
   const hydrateRoot = createRoot(root);
   hydrateRoot.render(
     <React.StrictMode>
-      <App />
+      <Router>
+        <FSMLoaderContextProvider>
+          <App />
+        </FSMLoaderContextProvider>
+      </Router>
     </React.StrictMode>
   );
 }

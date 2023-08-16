@@ -12,7 +12,8 @@
         "plugin:react-hooks/recommended"
     ],
     "env": {
-        "es2022": true
+        "es2022": true,
+        "browser": true
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
